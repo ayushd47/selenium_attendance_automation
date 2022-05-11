@@ -1,10 +1,13 @@
 # import time and selenium
 import time
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+
+options = FirefoxOptions()
+options.add_argument("--headless")
 
 # add path for the firefox driver
-driver = webdriver.Firefox(
-    executable_path=r'D:\\Projects\\Python Projects\\schoolworkspro automation script\\driver\\geckodriver.exe')
+driver = webdriver.Firefox(options=options)
 
 # add username and password of your site
 username = ""
